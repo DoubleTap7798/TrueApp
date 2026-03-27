@@ -1,0 +1,27 @@
+{
+  "name": "trueapp",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "build:web": "pnpm --filter @trueapp/web build",
+    "build:api": "pnpm --filter @trueapp/api build",
+    "build:worker": "pnpm --filter @trueapp/worker build",
+    "start:web": "pnpm --filter @trueapp/web start",
+    "start:api": "pnpm --filter @trueapp/api start",
+    "start:worker": "pnpm --filter @trueapp/worker start",
+    "db:push": "turbo run db:push --filter=@trueapp/api",
+    "db:studio": "turbo run db:studio --filter=@trueapp/api"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=20"
+  }
+}

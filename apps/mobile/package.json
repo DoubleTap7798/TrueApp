@@ -1,0 +1,14 @@
+{
+  "name": "@trueapp/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "app/index.tsx",
+  "scripts": {
+    "start": "expo start"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-native": "^0.73.0",
+    "expo": "^50.0.0"
+  }
+}
