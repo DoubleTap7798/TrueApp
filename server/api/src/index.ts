@@ -1,18 +1,22 @@
 import express from "express";
+import cors from "cors";
 
 const app = express();
-const port = Number(process.env.PORT ?? 3001);
+const port = Number(process.env.PORT || 8080);
 
-app.use(express.json());
+app.use(
+  cors({
+    origin: [
+      "https://trueapp-web-production.up.railway.app",
+      "http://localhost:5173"
+    ]
+  })
+);
 
 app.get("/health", (_req, res) => {
-  res.status(200).json({ ok: true, service: "api" });
+  res.json({ status: "ok" });
 });
 
-app.get("/", (_req, res) => {
-  res.status(200).send("TrueApp API is running");
-});
-
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`API listening on port ${port}`);
 });
