@@ -6,7 +6,7 @@ import {
   getFeaturedApps,
 } from "../db/queries";
 
-export const appsRouter = Router();
+export const appsRouter: Router = Router();
 
 // GET /apps
 // Query params: featured=true | trending=true | editorsPick=true

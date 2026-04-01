@@ -3,7 +3,7 @@ import {
   getAllCategories,
 } from "../db/queries";
 
-export const categoriesRouter = Router();
+export const categoriesRouter: Router = Router();
 
 // GET /categories
 categoriesRouter.get("/", async (_req: Request, res: Response) => {
